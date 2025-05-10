@@ -212,3 +212,193 @@ Numa jornada para realizar seus sonhos de adolescência a pedido da mãe, uma jo
 });
         </script>
     </div>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP 10 FILMES EM ALTA</title>
+    <style>
+        .texto_corpo {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .lista-filmes {
+            list-style-type: none;
+            padding: 0;
+        }
+        .filme {
+            padding: 12px 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            border-left: 4px solid #007bff;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .filme:hover {
+            background-color: #f0f7ff;
+            transform: translateX(5px);
+        }
+        .descricao_filme {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            animation: fadeIn 0.3s;
+        }
+        .fechar-descricao {
+            margin-top: 10px;
+            padding: 6px 12px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .fechar-descricao:hover {
+            background-color: #c82333;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="texto_corpo">
+        <h1>TOP 10 FILMES EM ALTA</h1>
+        <ol class="lista-filmes">
+            <li class="filme" data-descricao="desc_filme_1">
+                Má influência
+                <div id="desc_filme_1" class="descricao_filme">
+                    <p>Um ex-presidiário recebe a chance de recomeçar ao ser contratado para proteger uma rica herdeira de um perseguidor. Difícil vai ser resistir à química entre eles.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_2">
+                Você
+                <div id="desc_filme_2" class="descricao_filme">
+                    <p>Um homem obsessivo e perigosamente charmoso vai ao extremo para entrar na vida das mulheres que o fascinam.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_3">
+                Nonnas
+                <div id="desc_filme_3" class="descricao_filme">
+                    <p>Para honrar a memória da mãe, um homem arrisca tudo e abre um restaurante italiano. Sabe quem são as chefs? Um grupo de vovós.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_4">
+                Exterritorial
+                <div id="desc_filme_4" class="descricao_filme">
+                    <p>O filho da ex-militar Sara desapareceu em um consulado americano. Ela fará de tudo para encontrá-lo, inclusive encarar uma conspiração sombria.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_5">
+                Velozes e Furiosos 10
+                <div id="desc_filme_5" class="descricao_filme">
+                    <p>Dom Toretto enfrenta seu maior desafio até agora: a corrida para salvar a família de um inimigo cheio de rancor e fúria no volante.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_6">
+                Caos e destruição
+                <div id="desc_filme_6" class="descricao_filme">
+                    <p>Um roubo de drogas sai do controle, levando um policial a encarar o submundo de uma cidade corrupta para salvar o filho de um político importante.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_7">
+                Adolescência
+                <div id="desc_filme_7" class="descricao_filme">
+                    <p>Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_8">
+                O Eternauta
+                <div id="desc_filme_8" class="descricao_filme">
+                    <p>Uma tempestade de neve tóxica matou milhões de pessoas, mas Juan Salvo e um grupo de sobreviventes em Buenos Aires precisarão enfrentar uma nova ameaça invisível.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_9">
+                Bala perdida 3
+                <div id="desc_filme_9" class="descricao_filme">
+                    <p>No último filme da trilogia, o gênio dos carros Lino volta para terminar sua vingança contra Areski e o comandante corrupto que destruiu sua vida.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" data-descricao="desc_filme_10">
+                A lista da minha vida
+                <div id="desc_filme_10" class="descricao_filme">
+                    <p>Numa jornada para realizar seus sonhos de adolescência a pedido da mãe, uma jovem desvenda segredos familiares, encontra o amor e redescobre suas raízes.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        // Fecha todas as descrições exceto a clicada
+        function toggleDescricao(filmeClicado) {
+            const todasDescricoes = document.querySelectorAll('.descricao_filme');
+            todasDescricoes.forEach(desc => {
+                if (desc !== filmeClicado) {
+                    desc.style.display = 'none';
+                }
+            });
+            
+            // Alterna a visibilidade da descrição clicada
+            if (filmeClicado.style.display === 'block') {
+                filmeClicado.style.display = 'none';
+            } else {
+                filmeClicado.style.display = 'block';
+            }
+        }
+
+        // Configura os eventos após o carregamento da página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Evento para os filmes
+            document.querySelectorAll('.filme').forEach(filme => {
+                filme.addEventListener('click', function(e) {
+                    // Evita fechar se clicar no botão "Fechar"
+                    if (!e.target.classList.contains('fechar-descricao')) {
+                        const descricaoId = this.getAttribute('data-descricao');
+                        const descricao = document.getElementById(descricaoId);
+                        toggleDescricao(descricao);
+                    }
+                });
+            });
+
+            // Evento para os botões de fechar
+            document.querySelectorAll('.fechar-descricao').forEach(botao => {
+                botao.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.parentElement.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
