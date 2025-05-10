@@ -20,5 +20,45 @@ texto
 </ul>
 
 
+css
+.lista-filmes {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+}
+
+.filme {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.filme:hover {
+    background-color: #e0e0e0;
+}
+
+.descricao-filme {
+    display: none; /* Oculta a descrição inicialmente */
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.descricao-filme button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 ma influência:
 Um ex-presidiário recebe a chance de recomeçar ao ser contratado para proteger uma rica herdeira de um perseguidor. Difícil vai ser resistir à química entre eles.
