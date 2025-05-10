@@ -118,3 +118,97 @@ No último filme da trilogia, o gênio dos carros Lino volta para terminar sua v
 
 a lista da minha vida
 Numa jornada para realizar seus sonhos de adolescência a pedido da mãe, uma jovem desvenda segredos familiares, encontra o amor e redescobre suas raízes.
+
+
+
+    <div class="texto_corpo">
+        <h1>TOP 10 FILMES EM ALTA</h1>
+        <ol>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_1')">Má influencia
+                <div id="desc_filme_1" class="descricao_filme">
+                    <p>Um ex-presidiário recebe a chance de recomeçar ao ser contratado para proteger uma rica herdeira de um perseguidor. Difícil vai ser resistir à química entre eles.</p>
+                    <button onclick="fecharDescricao('descricao1', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_2')">Você
+                <div id="desc_filme_2" class="descricao_filme">
+                    <p>Um homem obsessivo e perigosamente charmoso vai ao extremo para entrar na vida das mulheres que o fascinam.</p>
+                    <button onclick="fecharDescricao('descricao2', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_3')">Nonnas
+                <div id="desc_filme_3" class="descricao_filme">
+                    <p>Para honrar a memória da mãe, um homem arrisca tudo e abre um restaurante italiano. Sabe quem são as chefs? Um grupo de vovós.</p>
+                    <button onclick="fecharDescricao('descricao3', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_4')">Exterritorial
+                <div id="desc_filme_4" class="descricao_filme">
+                    <p>O filho da ex-militar Sara desapareceu em um consulado americano. Ela fará de tudo para encontrá-lo, inclusive encarar uma conspiração sombria.</p>
+                    <button onclick="fecharDescricao('descricao4', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_5')">Velozes e Furiosos 10
+                <div id="desc_filme_5" class="descricao_filme">
+                    <p>Dom Toretto enfrenta seu maior desafio até agora: a corrida para salvar a família de um inimigo cheio de rancor e fúria no volante.</p>
+                    <button onclick="fecharDescricao('descricao5', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_6')">Caos e destruição 
+                <div id="desc_filme_6" class="descricao_filme">
+                    <p>Um roubo de drogas sai do controle, levando um policial a encarar o submundo de uma cidade corrupta para salvar o filho de um político importante.</p>
+                    <button onclick="fecharDescricao('descricao6', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_7')">Adolescência 
+                <div id="desc_filme_7" class="descricao_filme">
+                    <p>Um garoto de 13 anos é acusado de assassinar uma colega de escola, levando a família, a terapeuta e o investigador do caso a se perguntarem: o que realmente aconteceu?</p>
+                    <button onclick="fecharDescricao('descricao7', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_8')">O Eternauta 
+                <div id="desc_filme_8" class="descricao_filme">
+                    <p>Uma tempestade de neve tóxica matou milhões de pessoas, mas Juan Salvo e um grupo de sobreviventes em Buenos Aires precisarão enfrentar uma nova ameaça invisível.</p>
+                    <button onclick="fecharDescricao('descricao8', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_9')">Bala perdida 3 
+                <div id="desc_filme_9" class="descricao_filme">
+                    <p>No último filme da trilogia, o gênio dos carros Lino volta para terminar sua vingança contra Areski e o comandante corrupto que destruiu sua vida.</p>
+                    <button onclick="fecharDescricao('descricao9', event)">Fechar</button>
+                </div>
+            </li>
+            <li class="filme" onclick="mostrarDescricao('desc_filme_10')">A lista da minha vida
+                <div id="desc_filme_10" class="descricao_filme">
+                    <p>Numa jornada para realizar seus sonhos de adolescência a pedido da mãe, uma jovem desvenda segredos familiares, encontra o amor e redescobre suas raízes.</p>
+                    <button class="fechar-descricao">Fechar</button>
+                </div>
+            </li>
+        </ol>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+    const listaFilmes = document.querySelector('.lista-filmes');
+
+    // Abre a descrição ao clicar no <li>
+    listaFilmes.addEventListener('click', (event) => {
+        const itemFilme = event.target.closest('.filme');
+        if (!itemFilme) return; // Se não clicou em um filme, ignora
+
+        const idDescricao = itemFilme.dataset.descricao;
+        const descricao = document.getElementById(idDescricao);
+        
+        // Alterna a visibilidade (abre/fecha)
+        descricao.style.display = descricao.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Fecha a descrição ao clicar no botão (evita propagação)
+    listaFilmes.addEventListener('click', (event) => {
+        if (event.target.classList.contains('fechar-descricao')) {
+            event.stopPropagation(); // Impede que o clique no botão abra o modal
+            const descricao = event.target.closest('.descricao_filme');
+            descricao.style.display = 'none';
+        }
+    });
+});
+        </script>
+    </div>
