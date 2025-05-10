@@ -60,5 +60,21 @@ css
     cursor: pointer;
 }
 
+js
+
+function mostrarDescricao(id) {
+    const descricao = document.getElementById(id);
+    descricao.style.display = 'block'; // Exibe a descrição
+}
+
+function fecharDescricao(id, event) {
+    event.stopPropagation(); // Evita que o clique no botão feche e reabra a descrição
+    const descricao = document.getElementById(id);
+    descricao.style.display = 'none'; // Oculta a descrição
+}
+
+
+
+
 ma influência:
 Um ex-presidiário recebe a chance de recomeçar ao ser contratado para proteger uma rica herdeira de um perseguidor. Difícil vai ser resistir à química entre eles.
