@@ -61,17 +61,30 @@ css
 }
 
 js
+document.addEventListener('DOMContentLoaded', () => {
+    const listaFilmes = document.querySelector('.lista-filmes');
 
-function mostrarDescricao(id) {
-    const descricao = document.getElementById(id);
-    descricao.style.display = 'block'; // Exibe a descrição
-}
+    // Abre a descrição ao clicar no <li>
+    listaFilmes.addEventListener('click', (event) => {
+        const itemFilme = event.target.closest('.filme');
+        if (!itemFilme) return; // Se não clicou em um filme, ignora
 
-function fecharDescricao(id, event) {
-    event.stopPropagation(); // Evita que o clique no botão feche e reabra a descrição
-    const descricao = document.getElementById(id);
-    descricao.style.display = 'none'; // Oculta a descrição
-}
+        const idDescricao = itemFilme.dataset.descricao;
+        const descricao = document.getElementById(idDescricao);
+        
+        // Alterna a visibilidade (abre/fecha)
+        descricao.style.display = descricao.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Fecha a descrição ao clicar no botão (evita propagação)
+    listaFilmes.addEventListener('click', (event) => {
+        if (event.target.classList.contains('fechar-descricao')) {
+            event.stopPropagation(); // Impede que o clique no botão abra o modal
+            const descricao = event.target.closest('.descricao-filme');
+            descricao.style.display = 'none';
+        }
+    });
+});
 
 
 
