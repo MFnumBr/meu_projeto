@@ -1,1 +1,20 @@
 texto
+<ul class="lista-filmes">
+    <!-- Item 1 -->
+    <li class="filme" onclick="mostrarDescricao('descricao1')">
+        Título do Filme 1
+        <div id="descricao1" class="descricao-filme">
+            <p>Descrição detalhada do Filme 1. Lorem ipsum dolor sit amet.</p>
+            <button onclick="fecharDescricao('descricao1', event)">Fechar</button>
+        </div>
+    </li>
+
+    <!-- Item 2 -->
+    <li class="filme" onclick="mostrarDescricao('descricao2')">
+        Título do Filme 2
+        <div id="descricao2" class="descricao-filme">
+            <p>Descrição detalhada do Filme 2. Consectetur adipiscing elit.</p>
+            <button onclick="fecharDescricao('descricao2', event)">Fechar</button>
+        </div>
+    </li>
+</ul>
